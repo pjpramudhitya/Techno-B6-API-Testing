@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;:\&quot;Tenali Ramakrishna\&quot;, \n    \&quot;gender\&quot;:\&quot;male\&quot;, \n    \&quot;email\&quot;:\&quot;agadagad@15ce.com\&quot;, \n    \&quot;status\&quot;:\&quot;active\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;:\&quot;${name}\&quot;, \n    \&quot;gender\&quot;:\&quot;${gender}\&quot;, \n    \&quot;email\&quot;:\&quot;${email}\&quot;, \n    \&quot;status\&quot;:\&quot;${status}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -52,6 +52,34 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>5c882468-e83d-4167-a6c7-5e73d54702da</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>12369d3e-20dd-44ad-a4c6-f0f57aeac846</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ea8baddc-c934-4926-b5f7-537fc1674029</id>
+      <masked>false</masked>
+      <name>gender</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>873526f0-6c83-41dd-a47f-1d939785cef8</id>
+      <masked>false</masked>
+      <name>status</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
