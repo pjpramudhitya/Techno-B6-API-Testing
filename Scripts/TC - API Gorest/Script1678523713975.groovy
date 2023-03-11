@@ -38,6 +38,7 @@ if (WS.verifyResponseStatusCode(res_create_user, 201, FailureHandling.OPTIONAL))
 
     assertThat(jsonResponse.status.toString()).contains(Status)
 	
+	// Parsing user_id
 	user_id = jsonResponse.id.toString()
 	user_id = user_id.replace("[","")
 	user_id = user_id.replace("]","")
@@ -52,5 +53,36 @@ if (WS.verifyResponseStatusCode(res_create_user, 422, FailureHandling.OPTIONAL))
     print('Check Your Endpoint')
 }
 
+// Update User
+res_update_user = WS.sendRequest(findTestObject('Postman/Update User', 
+	[('id') : user_id,('new_name') : New_name, ('new_email') : New_email, ('new_gender') : New_gender
+            , ('new_status') : New_status]))
+
+if (WS.verifyResponseStatusCode(res_update_user, 200, FailureHandling.OPTIONAL)) {
+	res_get_user = WS.sendRequest(findTestObject('Postman/Get User', [('email') : New_email]))
+	
+	def jsonSlurper = new JsonSlurper()
+	
+	def jsonResponse = jsonSlurper.parseText(res_get_user.getResponseText())
+	
+	assertThat(jsonResponse.name.toString()).contains(New_name)
+	
+	assertThat(jsonResponse.email.toString()).contains(New_email)
+	
+	assertThat(jsonResponse.gender.toString()).contains(New_gender)
+	
+	assertThat(jsonResponse.status.toString()).contains(New_status)
+		
+}
+
+if (WS.verifyResponseStatusCode(res_update_user, 422, FailureHandling.OPTIONAL)) {
+	print('Title/Body Cannot Be Empty !')
+} else if (WS.verifyResponseStatusCode(res_update_user, 401, FailureHandling.OPTIONAL)) {
+	print('Authorization Failed')
+} else if (WS.verifyResponseStatusCode(res_update_user, 404, FailureHandling.OPTIONAL)) {
+	print('Check Your Endpoint')
+}
+
+// Delete User
 res_del_user = WS.sendRequest(findTestObject('Postman/Delete User', [('id') : user_id]))
 WS.verifyResponseStatusCode(res_del_user, 204, FailureHandling.OPTIONAL)
