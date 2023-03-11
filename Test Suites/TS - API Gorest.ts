@@ -11,4 +11,68 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>652e3e19-14b5-441f-be85-d3ec6828ddc6</testSuiteGuid>
+   <testCaseLink>
+      <guid>653997c7-2f7e-4f80-91ae-4cd9058ef7fa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TC - API Gorest</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Test Data Power Rangers</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>name</value>
+         <variableId>da7540e2-c0e7-4d42-bbad-0a4315679bc0</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>email</value>
+         <variableId>e7318e08-707e-48ff-b84e-89699cb30277</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>gender</value>
+         <variableId>2651ecfa-53d0-46d8-abac-fffa5c41714c</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>status</value>
+         <variableId>22f0ccdc-ff6c-462a-8274-3dea5e86f869</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>new_name</value>
+         <variableId>b0e14b6d-d569-4821-8a82-ccad6127e76e</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>new_email</value>
+         <variableId>74e25b55-27b0-4cf1-aa9e-5368bbe48e63</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>new_gender</value>
+         <variableId>3149032c-260e-4ad4-97b8-b2f5a6d9f670</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c7c93b85-b6f3-4cdf-8e4b-d1615d18bd9f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>new_status</value>
+         <variableId>4bbaf0ce-79ec-4480-9aed-b6e5306c5650</variableId>
+      </variableLink>
+   </testCaseLink>
 </TestSuiteEntity>
