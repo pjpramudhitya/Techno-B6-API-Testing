@@ -30,14 +30,14 @@
       <variableId>22f0ccdc-ff6c-462a-8274-3dea5e86f869</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'agad'</defaultValue>
+      <defaultValue>'BARU agad'</defaultValue>
       <description></description>
       <id>da7540e2-c0e7-4d42-bbad-0a4315679bc0</id>
       <masked>false</masked>
       <name>Name</name>
    </variable>
    <variable>
-      <defaultValue>'pjp1@mmaaa.com'</defaultValue>
+      <defaultValue>'blue@ranger.com2'</defaultValue>
       <description></description>
       <id>e7318e08-707e-48ff-b84e-89699cb30277</id>
       <masked>false</masked>

@@ -17,24 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import static org.assertj.core.api.Assertions.*
 
-response = WS.sendRequest(findTestObject('Postman/Create User', [('name') : Name, ('email') : Email, ('gender') : Gender
-            , ('status') : Status]))
+def user_id = "[967882]"
 
-if (WS.verifyResponseStatusCode(response, 201, FailureHandling.OPTIONAL)) {
-    
-	response2 = WS.sendRequest(findTestObject('Postman/Get User', [('Email') : Email]))
+user_id = user_id.replace("[","")
+user_id = user_id.replace("]","")
 
-    def jsonSlurper = new JsonSlurper()
-
-    def jsonResponse = jsonSlurper.parseText(response2.getResponseText())
-
-    assertThat(jsonResponse.user_id.toString()).contains(UserId)
-
-    assertThat(jsonResponse.title.toString()).contains(Title)
-
-    assertThat(jsonResponse.body.toString()).contains(Body)
-	
-//	System.out.println(jsonResponse)
-}
-
-
+System.out.println(user_id)
+//res_del_user = WS.sendRequest(findTestObject('Postman/Delete User', [('id') : user_id]))
+//WS.verifyResponseStatusCode(res_del_user, 204, FailureHandling.OPTIONAL)
