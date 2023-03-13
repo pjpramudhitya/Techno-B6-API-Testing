@@ -42,7 +42,12 @@ if (WS.verifyResponseStatusCode(res_create_user, 201, FailureHandling.OPTIONAL))
 	user_id = jsonResponse.id.toString()
 	user_id = user_id.replace("[","")
 	user_id = user_id.replace("]","")
-	System.out.println(user_id)
+	System.out.println("\n========Create User========\n"+
+		"User ID\t: "+user_id+
+		"\nName \t: "+ jsonResponse.name.toString()+
+		"\nEmail \t: "+ jsonResponse.email.toString()+
+		"\nGender \t: "+ jsonResponse.gender.toString()+
+		"\nStatus \t: "+ jsonResponse.status.toString())
 }
 
 if (WS.verifyResponseStatusCode(res_create_user, 422, FailureHandling.OPTIONAL)) {
@@ -72,6 +77,13 @@ if (WS.verifyResponseStatusCode(res_update_user, 200, FailureHandling.OPTIONAL))
 	assertThat(jsonResponse.gender.toString()).contains(New_gender)
 	
 	assertThat(jsonResponse.status.toString()).contains(New_status)
+	
+	System.out.println("\n========Update User========\n"+
+		"User ID\t: "+user_id+
+		"\nName \t: "+ jsonResponse.name.toString()+
+		"\nEmail \t: "+ jsonResponse.email.toString()+
+		"\nGender \t: "+ jsonResponse.gender.toString()+
+		"\nStatus \t: "+ jsonResponse.status.toString())
 		
 }
 
